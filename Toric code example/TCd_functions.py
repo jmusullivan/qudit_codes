@@ -142,7 +142,7 @@ def draw_tanner_graph(T, highlight_vertices=None):
     plt.axis('off');
 
 
-# these four functions allow us to convert between 
+# these four functions allow us to convert between T
 # (s)tring names of vertices and (i)nteger names of vertices
 def s2i(node):
     return int(node[1:]) if node[0] == 'd' else -int(node[1])-1

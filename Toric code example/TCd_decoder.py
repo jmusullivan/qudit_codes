@@ -328,9 +328,6 @@ def my_decoder(T, error):
         #repeat about for the above for merged clusters
         for i, Ki in enumerate(K):
             if is_valid_cluster(T, syndrome_update, Ki):
-                #print(f'cluster {i} is valid')
-                clusters_to_delete.update([i])
-
                 correction, correction_data_qubits = find_valid_correction(T, syndrome_update, Ki)
                 e_estimate_temp[correction_data_qubits] += correction
 
